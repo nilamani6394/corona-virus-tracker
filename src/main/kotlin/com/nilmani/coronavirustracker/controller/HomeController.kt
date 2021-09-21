@@ -17,9 +17,9 @@ class HomeController {
     fun home(model: Model):String{
         val allStats : List<LocationStats>? =coronaVirusDataService.getAllStats()
         val totalReportedCases =
-            allStats?.stream()?.mapToInt(ToIntFunction { stat : LocationStats -> stat.latestTotalCase })?.sum()
+            allStats?.stream()?.mapToInt { stat : LocationStats -> stat.latestTotalCase }?.sum()
         val totalNewCases =
-            allStats?.stream()?.mapToInt(ToIntFunction { stat: LocationStats -> stat.differFromPrevDay })?.sum()
+            allStats?.stream()?.mapToInt { stat: LocationStats -> stat.differFromPrevDay }?.sum()
         model.addAttribute("locationStats",allStats)
         model.addAttribute("totalReportedCases",totalReportedCases)
         model.addAttribute("totalNewCases",totalNewCases)
