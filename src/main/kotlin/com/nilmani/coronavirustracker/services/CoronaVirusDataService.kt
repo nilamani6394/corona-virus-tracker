@@ -16,7 +16,7 @@ import javax.annotation.PostConstruct
 const val VIRUS_DATA_URL =
     "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
 
-
+/**Need to use  a proper URL to track corona virus case Details*/
 @Service
 class CoronaVirusDataService {
 
