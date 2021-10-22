@@ -23,6 +23,7 @@ class CoronaVirusDataService {
     private var allStats : List<LocationStats> = ArrayList()
 
     fun getAllStats(): List<LocationStats>? {
+        println("When you  use above URl to call it will show error 404")
         return allStats
     }
     @PostConstruct
